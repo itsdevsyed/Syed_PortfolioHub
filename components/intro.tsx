@@ -1,14 +1,11 @@
-"use client";
-
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { SiLeetcode } from "react-icons/si";
 import { Typewriter } from 'react-simple-typewriter';
 
 export default function Intro() {
@@ -57,20 +54,13 @@ export default function Intro() {
                 </div>
             </div>
             <motion.h1 
-                className='mb-10 mt-4 px-4 text-2xl 
-                font-medium !leading-[1.5] 
-                sm:text-4xl'
+                className='mb-10 mt-4 px-4 text-2xl font-bold sm:text-5xl lg:text-xl  font-medium  !leading-[1.5]'
                 initial={{ opacity: 0, y: 100}}
                 animate={{ opacity: 1, y: 0}}
             >
                 <Typewriter
                     words={[
-"Hello, I'm Syed, a Full Stack Engineer with expertise in both front-end and back-end technologies. I specialize in creating dynamic and user-friendly websites and applications."
-
-
-
-
-
+                        "Hello, I'm Syed, a Full Stack Engineer with expertise in both front-end and back-end technologies. I specialize in creating dynamic and user-friendly websites and applications."
                     ]}
                     loop={1}
                     cursor
@@ -81,9 +71,7 @@ export default function Intro() {
                 />
             </motion.h1>
             <motion.div 
-                className='flex flex-col sm:flex-row items-center justify-center 
-                gap-4 
-                px-4 text-lg font-medium'
+                className='flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium'
                 initial={{ opacity: 0, y: 100}}
                 animate={{ opacity: 1, y: 0}}
                 transition={{
@@ -91,34 +79,23 @@ export default function Intro() {
                 }}
             >
                 <a
-                    className='group bg-white px-7 py-3 flex 
-                    items-center gap-2 
-                    rounded-full outline-none focus:scale-110 hover:scale-110
-                    hover:bg-white active:scale-200
-                    transition cursor-pointer dark:bg-white/10' 
+                    className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-200 transition cursor-pointer dark:bg-white/10' 
                     href='/Syed_Resume.pdf' 
                     download
                 >
                     Download CV 
                     <HiDownload 
-                        className='opacity-70 group-hover:translate-1 
-                        transition' 
+                        className='opacity-70 group-hover:translate-1 transition' 
                     />
                 </a>
                 <a 
-                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full 
-                    outline-none focus:scale-[1.15] 
-                    hover:scale-[1.15] hover:text-gray-950 active:scale-105
-                    transition borderBlack dark:bg-white/10 dark:text-white/60' 
+                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
                     href='https://www.linkedin.com/in/itsdevsyed/' target='_blank'
                 >
                     <BsLinkedin />
                 </a>
                 <a 
-                    className='bg-white p-4 text-gray-700 flex items-center 
-                    gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] 
-                    hover:text-gray-950 active:scale-105
-                    transition borderBlack dark:bg-white/10 dark:text-white/60' 
+                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
                     href='https://github.com/itsdevsyed' 
                     target='_blank'
                 >
