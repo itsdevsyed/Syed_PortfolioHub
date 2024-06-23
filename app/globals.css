@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --line-color: #000000;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+.typewriter-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.typewriter-text .bold {
+  font-weight: 700;
+}
+
+.typewriter-text .italic {
+  font-style: italic;
+}
+
+.typewriter-text .underline {
+  text-decoration: underline;
+}
+
