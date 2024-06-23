@@ -1,9 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaGraduationCap, FaLaptop, FaLaptopCode, FaLaptopHouse, FaReact, FaSalesforce } from "react-icons/fa";
-import Bouncing from 'public/bouncing.png'
-import Disney from 'public/Disney.png'
-import Youtube from 'public/youtube.png'
+import bouncing from 'public/bouncing.png'
+import disney from 'public/Disney.png'
+import youtube from 'public/youtube.png'
 
 export const links = [
   {
@@ -75,7 +75,7 @@ export const projectsData = [
     description:
       "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
     tags: [     "react" ,"react-dom","axios", "react-player","react-router-dom","dotenv"],
-    imageUrl: Youtube,
+    imageUrl: youtube,
     imagePath: "https://youtube-clone-theta-ruby.vercel.app/",
   },
   {
@@ -83,7 +83,7 @@ export const projectsData = [
     description:
       "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
     tags: [ "next", "react" , "react-dom", "tailwindcss"],
-    imageUrl: Disney,
+    imageUrl: disney,
     imagePath: "https://disney-plus-clone-nextjs-phi.vercel.app/",
   },
   {
@@ -91,7 +91,7 @@ export const projectsData = [
     description:
       "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
     tags: ["HTML", "CSS", "Javascript", "Matter.js" , "P5.js"],
-    imageUrl: Bouncing,
+    imageUrl: bouncing,
     imagePath: "https://bouncing-text.vercel.app/",
   },
  
