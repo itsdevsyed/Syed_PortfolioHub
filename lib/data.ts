@@ -61,7 +61,7 @@ export const experiencesData = [
     title: "Bachelor of Science in Computer Science",
     location: "Nanded, India ",
     description:
-      "Developed 10+ Projects in frontend. My stack includes React, Next.js, TypeScript, Tailwind, Sanity and MongoDB. I'm open to full-time opportunities.",
+    "Designed and developed a responsive and portable college website independently,as a Acadmic Project, incorporating components still in use in current products ",
     icon: React.createElement(FaGraduationCap),
     date: "2019 - 2022",
   },
