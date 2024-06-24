@@ -1,9 +1,9 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaGraduationCap, FaLaptop, FaLaptopCode, FaLaptopHouse, FaReact, FaSalesforce } from "react-icons/fa";
-import bouncing from 'public/bouncing.png'
-import disney from 'public/disney.png'
-import youtube from 'public/youtube.png' 
+import bouncing from 'public/Bouncing.png'
+import disney from 'public/Disney.png'
+import youtube from 'public/Youtube.png' 
 
 export const links = [
   {
