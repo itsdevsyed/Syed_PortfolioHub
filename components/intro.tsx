@@ -60,13 +60,14 @@ export default function Intro() {
             >
                 <Typewriter
                     words={[
-                        "Hello, I'm Syed, a Full Stack Engineer with expertise in both front-end and back-end technologies. I specialize in creating dynamic and user-friendly websites and applications."
+                        "Hello, I'm Syed, a Full Stack Engineer with expertise in both front-end and back-end technologies."
+                        ," I specialize in creating dynamic and user-friendly websites and applications."
                     ]}
-                    loop={1}
+                    loop={false}
                     cursor
-                    cursorStyle='_'
-                    typeSpeed={50}
-                    deleteSpeed={50}
+                    cursorStyle='-'
+                    typeSpeed={20}
+                    deleteSpeed={70}
                     delaySpeed={1000}
                 />
             </motion.h1>

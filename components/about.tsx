@@ -23,7 +23,7 @@ export default function About() {
                 <Typewriter
                     loop
                     cursor
-                    cursorStyle='_'
+                    cursorStyle='-'
                     typeSpeed={20}
                     deleteSpeed={50}
                     delaySpeed={1000}
