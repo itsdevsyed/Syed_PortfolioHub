@@ -74,7 +74,7 @@ export const projectsData = [
   {
     title: "Youtube Clone",
     description:
-      "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
+    "Build a YouTube clone with a modern interface and enhanced user experience using the Rapid API for seamless video streaming and interaction.",
     tags: [     "react" ,"react-dom","axios", "react-player","react-router-dom","dotenv"],
     imageUrl: youtube,
     imagePath: "https://youtube-clone-theta-ruby.vercel.app/",
@@ -90,7 +90,7 @@ export const projectsData = [
   {
     title: "Bouncing Text",
     description:
-      "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
+      " Create a dynamic text animation using Matter.js and p5.js, combining physics-based movement with creative typography for engaging visual effects.",
     tags: ["HTML", "CSS", "Javascript", "Matter.js" , "P5.js"],
     imageUrl: bouncing,
     imagePath: "https://bouncing-text.vercel.app/",
