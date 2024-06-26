@@ -7,6 +7,7 @@ import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { Typewriter } from 'react-simple-typewriter';
+import { BsWhatsapp } from 'react-icons/bs';
 
 export default function Intro() {
     const { ref } = useSectionInView("Home", 0.5);
@@ -102,6 +103,15 @@ export default function Intro() {
                 >
                     <BsGithub />
                 </a> 
+                <a 
+                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
+                    href='https://wa.me/[+91 9823366765]' 
+                    target='_blank'
+        >
+                    <BsWhatsapp />
+                     
+</a>
+                
             </motion.div>
         </section>
     )
