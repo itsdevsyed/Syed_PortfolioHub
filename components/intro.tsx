@@ -2,7 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -105,12 +105,26 @@ export default function Intro() {
                 </a> 
                 <a 
                     className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
-                    href='https://wa.me/[+91 9823366765]' 
+                    href='https://wa.me/9657092660' 
                     target='_blank'
         >
-                    <BsWhatsapp />
+                    <BsWhatsapp/>
                      
-</a>
+                </a>
+                <a 
+                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
+                    href='https://instagram.com/ohh.xyed'
+                    target='_blank'
+                >
+                    <BsInstagram />
+                </a><a 
+                    className='bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition borderBlack dark:bg-white/10 dark:text-white/60' 
+                    href='https://twitter.com/itsdevsyed'
+                    target='_blank'
+                >
+                    <BsTwitter />
+                </a>
+                
                 
             </motion.div>
         </section>

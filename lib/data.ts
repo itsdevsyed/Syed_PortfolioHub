@@ -30,6 +30,8 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
+  { name: 'Review', hash: '#review' }, // Add this line
+
 ] as const;
 
 export const experiencesData = [
