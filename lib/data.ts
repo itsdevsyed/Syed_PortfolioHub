@@ -82,7 +82,7 @@ export const projectsData = [
   {
     title: "Disney+ Clone",
     description:
-      "I made Awwwards winning website Cuberto. It's a single page website with a lot of animations and interactions.",
+    "Create a Disney-inspired streaming platform with a fresh design and enhanced functionalities for a magical entertainment experience.",
     tags: [ "next", "react" , "react-dom", "tailwindcss"],
     imageUrl: disney,
     imagePath: "https://disney-plus-clone-nextjs-phi.vercel.app/",
