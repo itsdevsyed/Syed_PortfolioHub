@@ -123,7 +123,13 @@ export const skillsData = [
 "Framer Motion",
 "Three.js",
 "p5.js",
-"matter.js"
+"matter.js",
+"Rest API",
+"Redux Toolkit",
+"Jira",
+"Bitbucket",
+"Jira",
+"GitLab",
 
 
 ] as const;
