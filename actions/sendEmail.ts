@@ -32,8 +32,8 @@ export const sendEmail = async (formData: FormData) => {
       from: "Contact Form <onboarding@resend.dev>",
       to: "shoaib.syed4@outlook.com",
       subject: "Message from contact form",
-      reply_to: senderEmail as string,
-      text: message as string,     
+      replyTo: senderEmail as string,
+      text: message as string,
     });
   } catch (error) {
     return {
@@ -41,6 +41,6 @@ export const sendEmail = async (formData: FormData) => {
     }
   }
   return {
-    data,  
+    data,
   };
 };

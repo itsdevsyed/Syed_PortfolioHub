@@ -4,7 +4,7 @@ import React, { useState } from 'react'; // Import useState
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import SectionHeading from './section-heading';
-import CaseStudyCard from './CaseStudyCard';
+import CaseStudyCard from './caseStudyCard';
 import DataBase from './caseStudies/dataBase'; // Import DataBase component
 
 // Your caseStudiesData (keep this as is, 'link' will now act as an identifier)
