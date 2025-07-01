@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaGraduationCap, FaLaptop, FaLaptopCode, FaLaptopHouse, FaReact, FaSalesforce } from "react-icons/fa";
 import bouncing from 'public/Bouncing.png'
 import disney from 'public/Disney.png'
-import youtube from 'public/Youtube.png' 
+import youtube from 'public/Youtube.png'
 
 export const links = [
   {
@@ -27,9 +27,14 @@ export const links = [
     hash: "#experience",
   },
   {
+    name: "CaseStudies",
+    hash: "#case-studies",
+  },
+  {
     name: "Contact",
     hash: "#contact",
   },
+
 
 ] as const;
 
@@ -66,11 +71,11 @@ export const experiencesData = [
     icon: React.createElement(FaGraduationCap),
     date: "2019 - 2022",
   },
- 
+
 ] as const;
 
 export const projectsData = [
-  
+
   {
     title: "Youtube Clone",
     description:
@@ -95,11 +100,15 @@ export const projectsData = [
     imageUrl: bouncing,
     imagePath: "https://bouncing-text.vercel.app/",
   },
- 
+
 ] as const;
 
 export const skillsData = [
-"C",
+
+"Go",
+"Kubernetes",
+"Docker",
+"Jenkins",
 "Java",
 "C++",
 "JavaScript",
@@ -108,8 +117,6 @@ export const skillsData = [
 "Next.js",
 "Node.js",
 "Express.js",
-"HTML",
-"CSS",
 "Git",
 "Redux",
 "Tailwind CSS",
@@ -122,7 +129,6 @@ export const skillsData = [
 "GitHub",
 "Framer Motion",
 "Three.js",
-"p5.js",
 "matter.js",
 "Rest API",
 "Redux Toolkit",

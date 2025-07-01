@@ -19,7 +19,7 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About Me</SectionHeading>
-      <p className="mb-3" font-family="font-sans" font-size="text-">
+      <p className="mb-3 font-sans text-lg">
         <Typewriter
           loop
           cursor
