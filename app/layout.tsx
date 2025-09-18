@@ -8,23 +8,25 @@ import Footer from '@/components/footer'
 import { Toaster } from 'react-hot-toast'
 import photo from '../public/photo.png'
 const inter = Inter({ subsets: ['latin'] })
-
-export const metadata = {
-  title: 'Portfolio-Syed',
-  description: 'Syed is a Full Stack Engineer developer based in India.',
-  imageUrl: photo,
-}
+import ParticlesBackground from "@/components/ParticlesBackground"; // ✅ import
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={`${inter.className} bg-white text-gray-950 relative pt-28 sm:pt-36 dark:bg-black dark:text-gray-50 dark:text-opacity-90`}>
+<body
+  className={`${inter.className} relative pt-28 sm:pt-36
+    bg-gradient-to-br from-white via-purple-50 to-purple-100
+    text-gray-950
+    dark:bg-gradient-to-br dark:from-gray-900 dark:via-black dark:to-purple-950
+    dark:text-gray-50 dark:text-opacity-90`}
+>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
+            <ParticlesBackground />   {/* 👈 background effect */}
             <Header />
             {children}
             <Footer />
@@ -34,5 +36,5 @@ export default function RootLayout({
         </ThemeContextProvider>
       </body>
     </html>
-  )
+  );
 }
