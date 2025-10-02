@@ -38,7 +38,7 @@ export const experiencesData = [
     title: "Freelancer - Front-End Developer",
     location: "Fiverr",
     description:
-      "Worked as a freelance Front-End Developer, specializing in HTML, CSS, JavaScript, React.js, and other related technologies, delivering high-quality websites at competitive prices.",
+      "Worked as a freelance Front-End Developer  specializing in HTML, CSS, JavaScript, React.js, and other related technologies, delivering high-quality websites at competitive prices.",
     icon: React.createElement(FaLaptopCode),
     date: "Dec 2019 – Aug 2021",
   },
