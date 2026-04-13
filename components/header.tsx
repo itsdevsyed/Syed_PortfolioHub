@@ -2,46 +2,34 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { links } from "@/lib/data"; // Ensure this imports the updated data file
 import Link from "next/link";
 import clsx from "clsx";
+import { links } from "@/lib/data";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
-const itemVariants = {
-  hidden: { y: -100, opacity: 0 },
-  visible: { y: 0, opacity: 1 },
-};
-
 export default function Header() {
-  const { activeSection, setActiveSection, setTimeOfLastClick } =
-    useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <header className="z-[999] relative">
-      <motion.div
-        className="fixed top-0 left-1/2   h-[4.5rem] w-auto rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.7rem] sm:top-6 sm:h-[3.25rem] sm:w-[46rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75"
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100, damping: 20 }}
-      ></motion.div>
-
-      <nav className="flex fixed w- top-[0.15rem] left-1/2 h-12 -translate-x-1/2 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-full flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+    <header className="relative z-[999]">
+      {/* THE VERTICAL DOCK
+          - Desktop: Fixed left, centered vertically.
+          - Mobile: Bottom-center pill (UX-friendly for reach).
+      */}
+      <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-8 sm:top-1/2 sm:bottom-auto sm:translate-x-0 sm:-translate-y-1/2">
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          className="flex flex-row items-center gap-2 rounded-2xl border border-white/10 bg-gray-900/40 p-2 backdrop-blur-2xl sm:flex-col sm:rounded-full"
+        >
           {links.map((link) => (
-            <motion.li
-              className="h-3/4  flex items-center justify-center relative"
-              key={link.hash}
-              variants={itemVariants}
-              initial="hidden"
-              animate="visible"
-              transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.1 * links.indexOf(link) }}
-            >
+            <div key={link.hash} className="group relative">
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:text-gray-950 dark:text-gray-500 dark:hover:text-gray-300",
-                  {
-                    "text-gray-950": activeSection === link.name,
-                  }
+                  "relative flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-500 sm:h-12 sm:w-12",
+                  activeSection === link.name
+                    ? "bg-white/10 text-white shadow-[0_0_20px_rgba(255,255,255,0.1)]"
+                    : "text-gray-500 hover:text-gray-200"
                 )}
                 href={link.hash}
                 onClick={() => {
@@ -49,23 +37,30 @@ export default function Header() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                {link.name}
+                {/* Visual Icon Substitute (The first letter)
+                    In a real build, you'd swap {link.name[0]} for Lucide icons.
+                */}
+                <span className="text-xs font-bold uppercase tracking-tighter">
+                  {link.name[0]}
+                </span>
 
+                {/* SLIDING TOOLTIP: Shows on hover */}
+                <span className="absolute left-full ml-4 hidden rounded-md bg-white px-2 py-1 text-[10px] font-bold uppercase tracking-widest text-black opacity-0 transition-all group-hover:opacity-100 sm:block">
+                  {link.name}
+                </span>
+
+                {/* THE STRAY LIGHT: Active indicator */}
                 {link.name === activeSection && (
-                  <motion.span
-                    className="bg-gray-200 rounded-full absolute inset-0 -z-10 dark:bg-gray-800  "
-                    layoutId="activeSection"
-                    transition={{
-                      type: "spring",
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
+                  <motion.div
+                    layoutId="activeIndicator"
+                    className="absolute -left-1 hidden h-6 w-[2px] rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6] sm:block"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
                 )}
               </Link>
-            </motion.li>
+            </div>
           ))}
-        </ul>
+        </motion.div>
       </nav>
     </header>
   );
